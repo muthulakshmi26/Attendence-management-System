@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Graph</title>
+</head>
+<body>
+    <h1>Attendance Graph for {{ username }}</h1>
+    {% if graph_data %}
+    <img src="data:image/png;base64,{{ graph_data }}" alt="Attendance Graph" style="width: 800px; height: auto;">
+    {% else %}
+    <p>No attendance data available for {{ username }}.</p>
+    {% endif %}
+</body>
+</html>
